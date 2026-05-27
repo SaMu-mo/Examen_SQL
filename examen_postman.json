@@ -1,0 +1,129 @@
+{
+  "info": {
+    "_postman_id": "36496a11-15b4-42f9-adbb-c334338fb686",
+    "name": "EXAMEN SQL",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54980129",
+    "_collection_link": "https://go.postman.co/collection/54980129-36496a11-15b4-42f9-adbb-c334338fb686?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Insertar vuelo",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"codigo\": \"AA-999\",\r\n    \"precioBoleto\": 350.00,\r\n    \"asientosDisponibles\": 20\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/vuelos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "vuelos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Vuelo",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"codigo\": \"AA-999\",\r\n    \"precioBoleto\": 350.00,\r\n    \"asientosDisponibles\": 20\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/vuelos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "vuelos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get por Id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/vuelos/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "vuelos",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Put Vuelos",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"codigo\": \"AA-101\",\r\n    \"precioBoleto\": 299.99,\r\n    \"asientosDisponibles\": 30\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/vuelos/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "vuelos",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Vuelo",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ]
+}

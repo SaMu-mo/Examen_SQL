@@ -85,4 +85,14 @@ public class VueloControlador {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al eliminar vuelo: " + e.getMessage());
         }
     }
+    
+    @GetMapping("/pocos-asientos/{asientos}")
+    public ResponseEntity<?> vuelosConPocosAsientos(@PathVariable Integer asientos) {
+        try {
+            List<Vuelo> lista = servicio.vuelosConPocosAsientos(asientos);
+            return ResponseEntity.ok(lista);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error: " + e.getMessage());
+        }
+    }
 }

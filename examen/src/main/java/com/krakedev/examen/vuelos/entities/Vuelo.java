@@ -23,6 +23,9 @@ public class Vuelo {
 
     @Column(name = "asientos_disponibles", nullable = false)
     private Integer asientosDisponibles;
+    
+    @Column(name = "destino", length = 100)
+    private String destino;
 
     public Vuelo() {}
 
@@ -44,9 +47,13 @@ public class Vuelo {
     public Integer getAsientosDisponibles() { return asientosDisponibles; }
     public void setAsientosDisponibles(Integer asientosDisponibles) { this.asientosDisponibles = asientosDisponibles; }
 
+    public String getDestino() { return destino; }
+    public void setDestino(String destino) { this.destino = destino; }
+    
+    
     @Override
     public String toString() {
         return "Vuelo [id=" + id + ", codigo=" + codigo + ", precioBoleto=" + precioBoleto +
-               ", asientosDisponibles=" + asientosDisponibles + "]";
+               ", asientosDisponibles=" + asientosDisponibles + ", destino=" + destino + "]";
     }
 }
