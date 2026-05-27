@@ -41,3 +41,14 @@ WHERE id = 1;
 DELETE FROM vuelos
 WHERE asientos_disponibles = 0;
 
+
+--Consulta de video
+
+SELECT * FROM vuelos;
+
+
+--Parte 3
+
+ALTER TABLE vuelos ADD COLUMN destino VARCHAR(100);
+
+SELECT * FROM vuelos WHERE codigo = 'MX-123';
